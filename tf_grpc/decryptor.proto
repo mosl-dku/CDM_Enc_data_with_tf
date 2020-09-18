@@ -1,0 +1,34 @@
+syntax = "proto2";
+
+
+ 
+
+package examples.decryptor_server;
+
+
+// A request message of ciphertext
+
+message GetDecryptionRequest {
+
+  required bytes ciphertext = 1;
+
+}
+
+// A response message containing the plaintext
+
+message GetDecryptionResponse {
+
+  required string plaintext = 1;
+
+}
+
+
+service Decryptor {
+
+  // Translates the given word.
+
+  rpc Decrypt(GetDecryptionRequest) returns (GetDecryptionResponse) {
+
+  }
+
+}
