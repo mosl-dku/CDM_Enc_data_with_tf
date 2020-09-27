@@ -115,8 +115,9 @@ y_pred = tf.matmul(X,theta,name="predictions")
 error = y_pred - y
 mse = tf.reduce_mean(tf.square(error),name="mse")
 gradients = tf.gradients(mse,[theta])[0]
-optimizer = tf.train.MomentumOptimizer(learning_rate=learning_rate,momentum=0.9)
-training_op = optimizer.minimize(mse)
+#optimizer = tf.train.MomentumOptimizer(learning_rate=learning_rate,momentum=0.9)
+#training_op = optimizer.minimize(mse)
+training_op = tf.assign(theta,theta-learning_rate*gradients)
 
 init = tf.global_variables_initializer()
 

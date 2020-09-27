@@ -52,7 +52,7 @@ test_x = test_sample
 for sample_idx in log_list:
   test_x[sample_idx] = test_x[sample_idx]/100
 
-n_epochs = 50000
+n_epochs = 30000
 learning_rate = 0.001
 
 X = tf.constant(x_train,dtype=tf.float32,name="X")

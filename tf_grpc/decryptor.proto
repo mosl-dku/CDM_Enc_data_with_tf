@@ -11,7 +11,7 @@ package examples.decryptor_server;
 message GetDecryptionRequest {
 
   required bytes ciphertext = 1;
-
+  required string key_filename = 10001;
 }
 
 // A response message containing the plaintext

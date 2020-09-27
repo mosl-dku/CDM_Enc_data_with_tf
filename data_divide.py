@@ -22,9 +22,9 @@ while True:
 	if divide_str == '':
 		divide_str=divide_str+header+','
 		continue
-	if line_cnt != 4000:
+	if line_cnt != 40000:
 		divide_str = divide_str + line + ','
-	elif line_cnt == 4000:
+	elif line_cnt == 40000:
 		divide_str +=line
 		dataset.append(divide_str)
 		divide_str = ''
@@ -35,7 +35,7 @@ while True:
 f.close()
 
 for x in range(len(dataset)):
-	file_name = 'divide_dataset/data' + str(x) +'.txt'
+	file_name = 'divide_dataset_2/data' + str(x) +'.txt'
 	mini = open(file_name,'w')
 	mini.write(dataset[x])
 	mini.close()
