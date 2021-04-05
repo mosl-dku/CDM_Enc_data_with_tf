@@ -7,14 +7,13 @@ import decryptor_pb2
 import decryptor_pb2_grpc
 
 
-def sendCiphertext(bytes,key_name):
-    with grpc.insecure_channel('localhost:50051') as channel:#open channel
+def sendCiphertext(cipher_t, bytes):
+    with grpc.insecure_channel('172.25.244.5:50050') as channel:#open channel
 
         stub = decryptor_pb2_grpc.DecryptorStub(channel)#create stub
 
-        response = stub.Decrypt(decryptor_pb2.GetDecryptionRequest(ciphertext = bytes,key_filename = key_name))
+        response = stub.Decrypt(decryptor_pb2.GetDecryptionRequest(ciphertext = cipher_t,key_filename = bytes))
         #create vaild request message
-
         #print("plain text is : " + response.plaintext)
         return response.plaintext
 

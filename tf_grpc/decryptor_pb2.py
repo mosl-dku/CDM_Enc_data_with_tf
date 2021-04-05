@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0f\x64\x65\x63ryptor.proto\x12\x19\x65xamples.decryptor_server\"A\n\x14GetDecryptionRequest\x12\x12\n\nciphertext\x18\x01 \x02(\x0c\x12\x15\n\x0ckey_filename\x18\x91N \x02(\t\"*\n\x15GetDecryptionResponse\x12\x11\n\tplaintext\x18\x01 \x02(\t2{\n\tDecryptor\x12n\n\x07\x44\x65\x63rypt\x12/.examples.decryptor_server.GetDecryptionRequest\x1a\x30.examples.decryptor_server.GetDecryptionResponse\"\x00'
+  serialized_pb=b'\n\x0f\x64\x65\x63ryptor.proto\x12\x19\x65xamples.decryptor_server\"A\n\x14GetDecryptionRequest\x12\x12\n\nciphertext\x18\x01 \x02(\x0c\x12\x15\n\x0ckey_filename\x18\x91N \x02(\x0c\"*\n\x15GetDecryptionResponse\x12\x11\n\tplaintext\x18\x01 \x02(\t2{\n\tDecryptor\x12n\n\x07\x44\x65\x63rypt\x12/.examples.decryptor_server.GetDecryptionRequest\x1a\x30.examples.decryptor_server.GetDecryptionResponse\"\x00'
 )
 
 
@@ -42,8 +42,8 @@ _GETDECRYPTIONREQUEST = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='key_filename', full_name='examples.decryptor_server.GetDecryptionRequest.key_filename', index=1,
-      number=10001, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
+      number=10001, type=12, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),

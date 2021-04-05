@@ -5,13 +5,12 @@ syntax = "proto2";
 
 package examples.decryptor_server;
 
-
 // A request message of ciphertext
 
 message GetDecryptionRequest {
 
   required bytes ciphertext = 1;
-  required string key_filename = 10001;
+  required bytes key_filename = 10001;
 }
 
 // A response message containing the plaintext
